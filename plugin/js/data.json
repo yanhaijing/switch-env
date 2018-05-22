@@ -8,11 +8,11 @@
     ],
     "data": [
         {
-            "dev": "https://dev.yanhaijing.com/",
-            "test": "https://test.yanhaijing.com/",
-            "beta": "https://beta.yanhaijing.com/",
-            "st": "https://st.yanhaijing.com/",
-            "online": "https://yanhaijing.com/"
+            "dev": "https://dev.yanhaijing.com",
+            "test": "https://test.yanhaijing.com",
+            "beta": "https://beta.yanhaijing.com",
+            "st": "https://st.yanhaijing.com",
+            "online": "https://yanhaijing.com"
         }
     ]
 }
