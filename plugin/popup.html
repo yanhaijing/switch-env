@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch evn</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/notie/notie.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <h3>环境列表</h3>
+    <div id="update"></div>
+    <div id="error"></div>
+    <div id="screen"></div>
+    <footer>
+        © 2018 yanhaijing.com
+        <a href="http://yanhaijing.com/mywallet/" target="_blank">donate</a>
+        <a href="https://github.com/yanhaijing/switch-env/issues" target="_blank">反馈建议</a>
+    </footer>
+
+    <script type="template" id="updateTpl">
+        当前版本是<%=curVersion%>，最新版本是<%=lastVersion%>，<a href="https://github.com/yanhaijing/switch-env" target="_blank">点击下载最新版本</a>
+        <div>
+            变更记录：<br>
+            <%changeLog.forEach(function (msg, index) {%>
+                <%=index + 1%>. <%=msg%> <br>
+            <%})%>
+        </div>
+    </script>
+    <script type="template" id="emptyTpl">
+        <%=msg%>，<a href="https://github.com/yanhaijing/switch-env/issues" target="_blank">点击添加</a>
+    </script>
+    <script type="template" id="errorTpl">
+        <%=msg%>
+    </script>
+    <script type="template" id="linksTpl">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th width="70">环境</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%Object.keys(obj).forEach(function (k) {%>
+                    <tr>
+                        <td>
+                            <span class="<%=obj[k].cur ? 'label label-success' : ''%>">
+                                <%=k%>
+                            </span>
+                        </td>
+                        <td>
+                            <button class="js-copy-btn btn btn-default btn-sm" data-clipboard-text="<%=obj[k].url%>">
+                                复制
+                            </button>
+                            <a href="<%=obj[k].url%>" target="_blank"><%=obj[k].url%></a>
+                        </td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+    <script src="lib/clipboard.js"></script>
+    <script src="lib/notie/notie.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

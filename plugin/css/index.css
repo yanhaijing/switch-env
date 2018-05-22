@@ -1,0 +1,21 @@
+html {
+    padding: 15px;
+    width: 700px;
+    min-height: 100px;
+}
+body {
+}
+
+a {
+    outline: 0
+}
+
+.table {
+    table-layout: fixed;
+}
+td {
+    word-break: break-all;
+}
+footer {
+    width: 670px;
+}

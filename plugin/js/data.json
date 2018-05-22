@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "changeLog": [
+        "完成域名切换与展示功能",
+        "完成版本升级提示功能",
+        "添加本地缓存数据的功能",
+        "添加一键复制功能"
+    ],
+    "data": [
+        {
+            "dev": "https://dev.yanhaijing.com/",
+            "test": "https://test.yanhaijing.com/",
+            "beta": "https://beta.yanhaijing.com/",
+            "st": "https://st.yanhaijing.com/",
+            "online": "https://yanhaijing.com/"
+        }
+    ]
+}
+
